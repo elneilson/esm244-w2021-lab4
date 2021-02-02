@@ -7,8 +7,19 @@
 #    http://shiny.rstudio.com/
 #
 
+library(shiny)
+library(shinythemes)
+library(bslib)
+
+my_awesome_theme <- bs_theme(
+    bg = "pink",
+    fg = "purple",
+    primary = "yellow",
+    base_font = font_google("Delius")
+)
+
 # Define UI for application that draws a histogram
-ui <- fluidPage(
+ui <- fluidPage(theme = my_awesome_theme,
 
     # Application title
     titlePanel("Old Faithful Geyser Data"),
